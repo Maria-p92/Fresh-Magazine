@@ -12,7 +12,7 @@ const Articles = () => {
 
   useEffect(() => {
     setLoading(true);
-    if (topic === 'main') {
+    if (!topic) {
       client
         .getEntries()
         .then(({ items }) => {
@@ -37,7 +37,7 @@ const Articles = () => {
   if (error) return <div>Error: {error.message}</div>;
   return (
     <div className='container'>
-      <h1>{topic.toUpperCase()}</h1>
+      <h1>{!topic ? 'Check out all our articles': topic.toUpperCase()}</h1>
       <div className='row'>
         {articles.map(article => (
           <div className='col-md-3 mb-3'>
@@ -59,7 +59,9 @@ const Articles = () => {
               )}
               <div className='card-body'>
                 <h5 className='card-title'>{article.fields.title}</h5>
-                <Link to={`/articles/single/${article.sys.id}`} className='btn btn-primary'>
+                <Link to={`/articles/${article.sys.contentType.sys.id}/${article.fields.slug}`}
+                  className='btn btn-primary'
+                >
                   Go to article
                 </Link>
               </div>
@@ -71,4 +73,4 @@ const Articles = () => {
   );
 };
 
-export default Articles
+export default Articles;

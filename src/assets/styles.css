@@ -1,6 +1,9 @@
 body{
     background-color: #f7f1eb;
 }
+.contenedor{
+    width: 80%;
+}
 ul{
     width: 100%;
     height: 100px;
@@ -10,4 +13,7 @@ ul{
 }
 .active{
     color: red;
+}
+#logoF{
+    width: 200px;
 }
