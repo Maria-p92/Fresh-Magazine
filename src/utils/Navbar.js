@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import '../assets/styles.css';
+import logo from '../assets/media/freshLogo.png';
 
 const Navbar = () => {
   return (
     <ul ClassName = 'menu'>
       <NavLink exact to='/' activeClassName='active'>
-        <img src="/src/assets/media/fresh-logo.png"/>
+        <img id="logoF" src={logo}/>
       </NavLink>
       <NavLink to='/Articles' activeClassName='active'>
         Articles
