@@ -5,7 +5,7 @@ const Home = ()=> {
     return (
         <div className='container' id='homecontainer' style={{display:'flex'}}>
             <div>
-                <h4>Feel FRESH!</h4>
+                <h4>BE FRESH!</h4>
                 <Link to='/articles' id='homeLi'>Check out our new articles</Link>
             </div>
             <div className='viewoverlay'>
