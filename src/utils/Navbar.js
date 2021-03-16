@@ -1,32 +1,40 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../assets/styles.css';
 import logo from '../assets/media/freshLogo.png';
+import { button, collapse} from 'react-bootstrap';
 
 const Navbar = () => {
   return (
-    <ul ClassName = 'menu'>
-      <NavLink exact to='/' activeClassName='active'>
-        <img id="logoF" src={logo}/>
-      </NavLink>
-      <NavLink to='/Articles' activeClassName='active'>
-        Articles
-      </NavLink>
-      <NavLink to='/Interviews' activeClassName='active'>
-        Interviews
-      </NavLink>
-      <NavLink to='/Tutorials' activeClassName='active'>
-        Tutorials
-      </NavLink>
-      <NavLink to='/Philosophie' activeClassName='active'>
-        Philosophie
-      </NavLink>
-      <NavLink to='/Collaborators' activeClassName='active'>
-        Collaborators
-      </NavLink>
-      <NavLink to='/contact' activeClassName='active'>
-        Contact
-      </NavLink>
-    </ul>
+    <nav className='navbar sticky-top flex-column navbar-expand-md' id='menu'>
+          <Link className='navbar-brand' to='/'>
+            <img id="logoF" src={logo}/>
+          </Link>  
+      <div className='container-fluid' id='menu'>    
+          <div className='menu collapse navbar-collapse'>
+            <ul ClassName = 'navbar-nav ml-auto'>
+              <NavLink to='/Articles' activeClassName='active' className='itemsmenu'>
+                Articles
+              </NavLink>
+              <NavLink to='/Interviews' activeClassName='active' className='itemsmenu'>
+                Interviews
+              </NavLink>
+              <NavLink to='/Tutorials' activeClassName='active' className='itemsmenu'>
+                Tutorials
+              </NavLink>
+              <NavLink to='/Philosophie' activeClassName='active' className='itemsmenu'>
+                Philosophie
+              </NavLink>
+              <NavLink to='/Collaborators' activeClassName='active' className='itemsmenu'>
+                Collaborators
+              </NavLink>
+              <NavLink to='/contact' activeClassName='active' className='itemsmenu'>
+                Contact
+              </NavLink>
+            </ul>
+          </div>
+      </div>   
+  </nav>
+    
   );
 };
 

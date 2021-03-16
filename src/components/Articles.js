@@ -36,16 +36,19 @@ const Articles = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className='container'>
-      <h1>{!topic ? 'Check out all our articles': topic.toUpperCase()}</h1>
-      <div className='row'>
+    <div className='container-fluid'>
+      <div id='titleHea'>
+        <h1>{!topic ? 'Find what you want, read what you like': topic.toUpperCase()}</h1>
+        <h2>Check out all the articles available, there are so many interesting things to read and learn from!</h2>
+      </div>
+      <div className='row containerMain'>
         {articles.map(article => (
-          <div className='col-md-3 mb-3'>
-            <div className='card' key={article.sys.id}>
-              {article.fields.mainImage ? (
+          <div className='col-sm-6'>
+            <div className='card' id='inArticle' key={article.sys.id}>
+              {article.fields.imgArticle ? (
                 <img
                   className='card-img-top'
-                  src={article.fields.mainImage.fields.file.url}
+                  src={article.fields.imgArticle.fields.file.url}
                   alt={article.fields.title}
                   style={{ objectFit: 'cover', height: '200px' }}
                 />
@@ -59,10 +62,13 @@ const Articles = () => {
               )}
               <div className='card-body'>
                 <h5 className='card-title'>{article.fields.title}</h5>
+                <p className='card-text'> {article.fields.descriptionTitle} </p>
+                <h6 style={{textAlign:'center'}}>By {article.fields.author} </h6>
                 <Link to={`/articles/${article.sys.contentType.sys.id}/${article.fields.slug}`}
                   className='btn btn-primary'
+                  id='btnarticles'
                 >
-                  Go to article
+                  Read the article
                 </Link>
               </div>
             </div>
