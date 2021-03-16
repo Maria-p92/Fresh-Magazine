@@ -1,19 +1,201 @@
 body{
-    background-color: #f7f1eb;
+    background-color: #f3f3f3;
+    font-family: 'Heebo', sans-serif;
 }
-.contenedor{
-    width: 80%;
+.container, .container-fluid{
+    padding: 0;
+    
+}
+
+/* Menu */
+a.navbar-brand{
+    padding-bottom: 1rem;
 }
 ul{
-    width: 100%;
-    height: 100px;
     align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
     display: flex;
+    align-content: center;
     justify-content: space-evenly;
 }
-.active{
-    color: red;
-}
 #logoF{
+    padding-top: 2rem;
     width: 200px;
 }
+nav{
+    background: #f3f3f3;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    background: white;
+}
+#menu{
+    padding: 0;
+}
+.itemsmenu {
+    font-weight: 800;
+    color:black;
+}
+.itemsmenu:hover {
+    color:rgb(32, 139, 143);
+    text-decoration: overline 2px;
+}
+.itemsmenu.active {
+    color:rgb(32, 139, 143);
+    text-decoration: none;
+}
+
+/* Titulos */
+
+#titleHea{
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Hebbo', sans-serif;
+}
+#titleHea h1{
+    text-decoration: overline 2rem;
+    font-weight: 900;
+    font-size: 4rem;
+    margin-top: 1.1rem;
+}
+#titleHea h2{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.containerMain{
+    margin: 0;
+    padding-top: 4rem;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+/* Cards */
+
+#inArticle{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.card.body{
+    padding: 2rem;
+}
+a.btn.btn-primary{
+    background-color: transparent;
+    color: rgb(32, 139, 143);
+    display: flex;
+    border: none;
+    justify-content: flex-end;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+    background-color: transparent;
+    border-color:transparent;
+    color: rgb(32, 139, 143);
+    text-decoration: underline 2px;
+}
+h6{
+    font-weight: 400;
+    text-align: right;
+}
+h5.card-title{
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+p.card-text{
+    opacity: 0.9;
+    font-size: 1.1rem;
+    font-style: oblique;
+    font-weight: 500;
+}
+img.card-img-top{
+    height: 400px!important;
+}
+.card{
+    border-radius: 0;
+}
+#interviewText{
+    text-align: center;
+}
+/* Tutorials */
+#artiTuto{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+/* Home */
+
+#homecontainer{
+    margin-top: 5rem;
+}
+#homeLi{
+    text-decoration: none;
+    font-size: 3rem;
+}
+h4{
+    font-family: 'Hebbo',sans-serif;
+    font-weight: 800;
+    font-size: 7rem;
+}
+
+/* Philosophy */
+h1.titleSec{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 3rem;
+    font-weight: 900;
+    font-size: 4rem;
+    font-family: 'Hebbo', sans-serif;
+    opacity: 0.9;
+    
+}
+.philoText{
+    font-size: 2rem;
+    color: black;
+    font-weight: 300;
+}
+/* Collaborators */
+#colaTitle{
+    background-color: transparent;
+}
+/* Contact */
+
+.form-control{
+    border: none;
+}
+.form-group{
+    margin-top: 1.5rem;
+}
+#bcontact{
+    color: white;
+    opacity: 0.9;
+    width: 10rem;
+    padding: 1rem;
+    border: none;
+    background-color: rgb(32, 139, 143);
+}
+.form-control:focus {
+    border-color: rgb(32, 139, 143);
+    box-shadow: 0 0 0 0.2rem rgb(32 139 143 / 25%);
+}
+/* Single Article*/
+
+
+
+
+
